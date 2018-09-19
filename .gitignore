@@ -1,7 +1,7 @@
 /JAVA/.metadata
 /JAVA/.recommenders
-*/.settings
-*/bin
+/JAVA/*/.settings
+/JAVA/*/bin
 *.classpath
 *.project
 *.o
