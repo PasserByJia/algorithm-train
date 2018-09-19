@@ -1,0 +1,8 @@
+/JAVA/.metadata
+/JAVA/.recommenders
+*/.settings
+*/bin
+*.classpath
+*.project
+*.o
+*.exe
