@@ -30,7 +30,8 @@ public class Main {
 				max  = sum;
 				sart = temp;
 				end  = i;
-			}else if(sum<0) {
+			} 
+			if(sum<0) {
 				sum =0;
 				temp =i+1;
 			}
