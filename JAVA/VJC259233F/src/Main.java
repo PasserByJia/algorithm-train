@@ -1,4 +1,4 @@
-//HDUOJ 2048
+//HDUOJ 2084
 //POJ 1163
 import java.util.Scanner;
 public class Main {
