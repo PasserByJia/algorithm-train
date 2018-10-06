@@ -1,4 +1,3 @@
-//该代码未成功
 import java.util.*;
 public class Main {
 	public static void main(String[] args) {
@@ -23,13 +22,13 @@ public class Main {
 			int ans = 0;
 	        for (int i = 1; i <= n; i++)
 	            ans = Math.max(ans, dp[i]);
-	        System.out.printf("%d\n", ans);
+	        System.out.println(ans);
 		}
 		
 	}
 }
 /*
- *此解法应该并没有错误，但是java代码提交到HDUOJ里就是错误的情况
+ *此解法也是正确的
  import java.util.*;
 public class Main {
 	public static void main(String[] args) {
