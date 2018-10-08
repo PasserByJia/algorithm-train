@@ -1,3 +1,5 @@
+//POJ3984
+//其实这道题也是BFS的题目我的思路没错。
 import java.util.Scanner;
 public class Main {
 	public static int[][] maze = new int[5][5];
