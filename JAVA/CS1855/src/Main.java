@@ -1,3 +1,5 @@
+//这个OJ失效了。
+//https://vjudge.net/contest/142420#problem/E
 import java.util.*;
 public class Main {
 	public static void main(String[] args) {
