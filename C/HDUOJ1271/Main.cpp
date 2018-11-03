@@ -14,6 +14,8 @@ int main()
         {
             c=(n/k)/11;
             b=(n/k)%11;
+            cout<<"b "<<b<<endl;
+           cout<<"c "<<c<<endl;
             if(b+c&&b<10)       //²»½øÎ»
             {
                 a=(n-b*k-11*c*k)/2;
