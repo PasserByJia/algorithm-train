@@ -13,10 +13,10 @@ public class Main {
 					a[j][k] = input.nextInt();
  				}
 			}
-			for(int j =0;j<=n;j++) {
+			for(int j =0;j<=m;j++) {
 				dp[0][j] = -105;
 			}
-			for(int j =0;j<=m;j++) {
+			for(int j =0;j<=n;j++) {
 				dp[j][0] = -105;
 			}
 			dp[1][0] = dp[0][1]=0 ;
