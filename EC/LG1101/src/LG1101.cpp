@@ -15,44 +15,53 @@ int n;
 char word[105][105];
 char res[105][105];
 char key[] = {'y','i','z','h','o','n','g'};
-
-int dfs(int x,int y,int count)
+int dir[][2]={{-1,-1},{-1,0},{-1,1},{0,-1},{0,1},{1,-1},{1,0},{1,1}};//八向的常量数组
+int dfs(int x,int y,int count,int dic)
 {
-
+//	cout<<"count+dic"<<count<<" "<<dic<<endl;
+//	cout<<"x+y"<<x<<" "<<y<<endl;
+//	cout<<"vis"<<vis[x][y]<<endl;
 	if(x<1||x>n||y<1||y>n) return 0;
 	if(vis[x][y]==0)return 0;
 //	cout<< "???"<<endl;
 //	cout<< count<<endl;
 	if(count<=6 && word[x][y]!=key[count]) return 0;
-	if(count ==6&&word[x][y]==key[count])
+	if(count==6&&word[x][y]==key[count])
 	{
 		res[x][y] = word[x][y];
 		return 1;
 	}
 	vis[x][y] =0;
 	int flag =0;
-//	int cir =0;
 //	cout<<dic<<" "<<cir<<endl;
-	for(int i=-1;i<=1;i++)
-		for(int j=-1;j<=1;j++)
+	for(int i=0;i<8;i++)
+	{
+		if(count==0)
 		{
-			if(i!=0||j!=0)
+			//cout<<i;
+			if(dfs(x+dir[i][0],y+dir[i][1],count+1,i))
 			{
-				if(dfs(x+i,y+j,count+1))
-				{
-					flag=1;
-				}
-
+				flag=1;
+			}
+		}else if(i==dic)
+		{
+	//		cout<<i<<endl;
+			if(dfs(x+dir[i][0],y+dir[i][1],count+1,dic))
+			{
+				flag=1;
 			}
 		}
+	}
 	if(flag)
 	{
 		res[x][y] = word[x][y];
+		vis[x][y] = 1;
 		return 1;
 	}else{
+		vis[x][y] = 1;
 		return 0;
 	}
-	vis[x][y] = 1;
+
 }
 
 int main() {
@@ -81,7 +90,7 @@ int main() {
 			if(word[i][j]=='y')
 			{
 				//cout<<word[i][j];
-				dfs(i,j,0);
+				dfs(i,j,0,-1);
 			}
 		}
 	}
