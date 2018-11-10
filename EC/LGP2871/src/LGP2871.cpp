@@ -1,5 +1,5 @@
 //============================================================================
-// Name        : LGP1634.cpp
+// Name        : LGP2871.cpp
 // Author      : 
 // Version     :
 // Copyright   : Your copyright notice
@@ -7,17 +7,31 @@
 //============================================================================
 
 #include <iostream>
+#include <cstring>
+#include <cmath>
 using namespace std;
-long long n;//几轮
-long long x;//感染数量
-long long count =1;
+int m,n,w[3500],c[3500],f[12881];
+
 int main() {
-	cin>>x>>n;
-	for(int i=0;i<n;i++)
+	cin>>n>>m;
+	memset(f, 0, sizeof(f));
+	for(int i =1;i<=n;i++)
 	{
-		count+=(count*x);
+		cin>>w[i];
+		cin>>c[i];
 	}
-	cout<<count<<endl;
+
+	for(int i =1;i<=n;i++)
+	{
+		for(int v=m;v>0;v--)
+		{
+			if(w[i]<=v)
+			{
+				f[v] = max(f[v-w[i]]+c[i],f[v]);
+			}
+		}
+	}
+	cout<<f[m];
 	//cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
 	return 0;
 }
