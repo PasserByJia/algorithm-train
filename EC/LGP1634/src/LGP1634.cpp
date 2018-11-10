@@ -1,5 +1,5 @@
 //============================================================================
-// Name        : LGP3742.cpp
+// Name        : LGP1634.cpp
 // Author      : 
 // Version     :
 // Copyright   : Your copyright notice
@@ -8,23 +8,16 @@
 
 #include <iostream>
 using namespace std;
-char x[101];
-char y[101];
-int n;
-
+int n;//几轮
+int x;//感染数量
+int count =1;
 int main() {
-	cin>>n;
-	cin>>x;
-	cin>>y;
+	cin>>x>>n;
 	for(int i=0;i<n;i++)
 	{
-		if(x[i]<y[i])
-		{
-			cout<<-1<<endl;
-			return 0;
-		}
+		count+=(count*x);
 	}
-	cout<<y<<endl;
+	cout<<count<<endl;
 	//cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
 	return 0;
 }
