@@ -17,7 +17,7 @@ int main() {
 //	{
 //			for(j = 1; j <= n; j ++)
 //			{
-//				cout<<a[i][j];
+//				cout<<a[i][j]
 //			}
 //			cout<<endl;
 //	}
