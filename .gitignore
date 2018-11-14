@@ -6,3 +6,8 @@
 *.project
 *.o
 *.exe
+/EC/*/.settings
+/EC/*/Debug
+/EC/*/.cproject
+/EC/*/.gitignore
+/EC/*/.project
