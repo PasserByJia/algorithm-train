@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+//³¬¼¶±©Á¦
 int main() {
 	int a,b,c,d,e,f,g,h,i,temp1,temp2,temp3;
 	for(a=0;a<=9;a++){
