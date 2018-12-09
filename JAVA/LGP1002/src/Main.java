@@ -1,4 +1,4 @@
-// "static void main" must be defined in a public class.
+// "static void main: must be defined in a public class.
 import java.util.Scanner;
 public class Main {
     public static int[][] ma= {{1,2},{2,1},{-2,1},{-1,2},{-2,-1},{-1,-2},{1,-2},{2,-1}};
