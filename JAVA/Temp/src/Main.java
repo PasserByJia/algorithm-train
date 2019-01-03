@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class Main{
     public static void main(String[] args){
-        solution2(10,3);
+        solution2(1000,3);
     }
 	public static int solution2(int nLevel, int kChess) {
 		if (kChess == 1) {
