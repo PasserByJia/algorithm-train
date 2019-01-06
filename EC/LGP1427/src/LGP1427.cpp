@@ -1,5 +1,5 @@
 //============================================================================
-// Name        : LGP1035.cpp
+// Name        : LGP1427.cpp
 // Author      : 
 // Version     :
 // Copyright   : Your copyright notice
@@ -9,14 +9,19 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-	double k ,n=0,S=0;
-	cin>>k;
-	while(S<=k){
-		n++;
-		S+=(1/n);
-		//cout <<S<<" "<<n<< endl;
-	}
-	cout <<n<< endl; // prints !!!Hello World!!!
-	return 0;
+int main(){
+    stack<int> s;
+    while (1){
+        int a;
+        cin>>a;
+        if (!a) break;
+        s.push(a);
+    }
+    while (!s.empty()){
+        cout<<s.top();
+        printf(" ");
+        s.pop();
+    }
+    cout<<endl;
+    return 0;
 }

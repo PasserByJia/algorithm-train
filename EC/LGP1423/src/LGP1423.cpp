@@ -1,5 +1,5 @@
 //============================================================================
-// Name        : LGP1035.cpp
+// Name        : LGP1423.cpp
 // Author      : 
 // Version     :
 // Copyright   : Your copyright notice
@@ -10,13 +10,13 @@
 using namespace std;
 
 int main() {
-	double k ,n=0,S=0;
-	cin>>k;
-	while(S<=k){
-		n++;
-		S+=(1/n);
-		//cout <<S<<" "<<n<< endl;
+	double f =2,d,s=2,step=1;
+	cin>>d;
+	while(s<d){
+		step++;
+		f=0.98*f;
+		s+=f;
 	}
-	cout <<n<< endl; // prints !!!Hello World!!!
+	cout <<step<< endl; // prints !!!Hello World!!!
 	return 0;
 }
