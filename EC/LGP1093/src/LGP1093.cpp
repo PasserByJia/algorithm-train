@@ -35,9 +35,9 @@ int main()
     cin>>n;
     for(int i=1;i<=n;i++)
     {
-        student[i].num=i;//录入编号
-        cin>>student[i].c>>student[i].m>>student[i].e;//输入
-        student[i].sum=student[i].c+student[i].m+student[i].e;//计算总分
+        student[i].num=i;
+        cin>>student[i].c>>student[i].m>>student[i].e;
+        student[i].sum=student[i].c+student[i].m+student[i].e;
     }
     sort(student+1,student+1+n,cmp);
     for(int i=1;i<=5;i++)
