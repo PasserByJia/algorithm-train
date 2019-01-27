@@ -17,17 +17,19 @@ public class PostixExpression {
 		Stack suffix = new Stack();
 		Stack op = new Stack();
 		for(int i =0;i<expression.length();i++) {
-			//System.out.println("i="+i);
 			char ch = expression.charAt(i);
 			if(ch<'9'&&ch>'0') {
-				suffix.add(ch);
+				while(expression.length()>0&&ch<='9'&&ch>='0'&&i+1<expression.length()) {
+					suffix.add(ch);
+					i++;
+					ch = expression.charAt(i);
+				}
+			    i--;
 			}else if(op.size()==0){
 				op.add(ch);
 			}else {
 				int pop = getIndex((char)op.peek());
 				int add = getIndex(ch);
-				//System.out.println("pop="+pop);
-				//System.out.println("add="+add);
 				if(add<pop&&pop!=4) {
 					while( op.size()!=0 && getIndex((char)op.peek())!=4 ) {
 						suffix.add(op.pop());
