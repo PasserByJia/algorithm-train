@@ -8,7 +8,6 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-using namespace std;
 string a[21];
 bool cmp(string a,string b)
 {
