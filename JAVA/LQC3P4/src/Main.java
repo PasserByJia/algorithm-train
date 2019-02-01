@@ -4,10 +4,10 @@ public class Main {
         double count = 0, lose = 0;
         Random random = new Random();
         for (int n = 0; n < 500000; n++) {
-            int check = Math.abs(random.nextInt() % 6) + 1;
-            int i = Math.abs(random.nextInt() % 6) + 1;
-            int j = Math.abs(random.nextInt() % 6) + 1;
-            int k = Math.abs(random.nextInt() % 6) + 1;
+            int check = random.nextInt(6) + 1;
+            int i = random.nextInt(6) + 1;
+            int j = random.nextInt(6) + 1;
+            int k = random.nextInt(6) + 1;
             count++;
             if (i == check && j == check && k == check) {
                 lose = lose + 6 + 1;
@@ -24,5 +24,4 @@ public class Main {
         double win = 1 - lose / count;
         System.out.format("%.3f", win);
     }
-
 }
