@@ -11,9 +11,10 @@ public class Main {
             return vis[x][y][num][max + 1];
         if(x == n - 1 && y == m - 1) {//到达边界
             if(num == k||(num == k - 1 && max < map[x][y]))//最后一个可要可不要但都算一个路径
-            	return 1;
+            	vis[x][y][num][max + 1] = 1;
             else 
-            	return 0;
+            	vis[x][y][num][max + 1] = 0;
+            return vis[x][y][num][max + 1];
         }
         long result = 0;
         if(x + 1 < n) {  //向下移动一步
