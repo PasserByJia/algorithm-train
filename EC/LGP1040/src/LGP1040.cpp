@@ -28,10 +28,16 @@ int main() {
                     f[i][j] = f[i][k - 1] * f[k + 1][j] + f[k][k];
                     root[i][j] = k;
                 }
+                for(int z =1;z<=n;z++){
+    				for(int x =1;x<=n;x++){
+    					cout << f[z][x] << "\t";
+    				}
+    				cout << endl;
+    			}
             }
         }
+        cout << "=============================" <<endl;
     }
-
     cout << f[1][n] << endl;
     print(1, n);
     return 0;
