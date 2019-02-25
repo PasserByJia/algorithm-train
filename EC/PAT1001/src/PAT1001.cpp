@@ -11,15 +11,17 @@ using namespace std;
 
 int main() {
 	int n,ans=0;
-	cin>>n;
-	while(n!=1){
-		if(n%2==0){
-			n/=2;
-		}else{
-			n = (3*n+1)/2;
-		}
-		ans++;
+	while(cin>>n){
+		while(n!=1){
+				if(n%2==0){
+					n/=2;
+				}else{
+					n = (3*n+1)/2;
+				}
+				cout<<n<<" ";
+			}
 	}
-	cout << ans << endl; // prints !!!Hello World!!!
+
+	//cout << ans << endl; // prints !!!Hello World!!!
 	return 0;
 }
