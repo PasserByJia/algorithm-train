@@ -1,5 +1,3 @@
-
-
 #include <bits/stdc++.h>
 using namespace std;
 int num[1000],ans[1000];
@@ -26,21 +24,19 @@ int main() {
 		}
 
 	}
-	int cnt =0;
-	for(int i =0;i<n;i++){
-		int l = nu[i];
-		if(!num[l]){
-			ans[cnt++]= l;
+	sort(nu,nu+n,cmp);
+	int end =0;
+	for(int i=0;i<n;i++){
+		if(num[nu[i]]==0){
+			end = nu[i];
 		}
 	}
-	sort(ans,ans+cnt,cmp);
-	int is =1;
-	for(int i=0;i<cnt;i++){
-		if(is){
-			cout<<ans[i];
-			is =0;
-		}else{
-			cout<<" "<<ans[i];
+	for(int i=0;i<n;i++){
+		if(num[nu[i]]==0){
+			cout<<nu[i];
+			if(nu[i]!=end){
+				cout<<" ";
+			}
 		}
 	}
 	return 0;
