@@ -30,11 +30,13 @@ int main() {
 		if(j==y){
 			p1.p++;
 			p2.p++;
+
 		}else{
 			if((j=='C'&&y=='J')||(j=='J'&&y=='B')||(j=='B'&&y=='C')){
 				p1.s++;
 				p2.f++;
 				p1.cout[j]++;
+
 			}else{
 				p1.f++;
 				p2.s++;
