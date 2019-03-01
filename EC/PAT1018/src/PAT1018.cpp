@@ -59,3 +59,11 @@ int main() {
 	cout << JJ<<" "<<YY<< endl;
 	return 0;
 }
+/*
+ *
+ * 5
+B B
+B B
+J J
+B B
+J J*/
